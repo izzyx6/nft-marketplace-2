@@ -1,10 +1,10 @@
 import { useWeb3React } from "@web3-react/core";
 import Image from "next/image";
 import { toast } from "react-toastify";
-import { injected, fortmatic } from "../../utils/connectors";
+import { injected} from "../../utils/connectors";
 
 import MetaMaskLogo from "../../assets/images/metamask-logo.webp";
-import FortmaticLogo from "../../assets/images/fortmatic-logo.webp";
+// import FortmaticLogo from "../../assets/images/fortmatic-logo.webp";
 
 const connectors = {
   Injected: {
@@ -12,11 +12,11 @@ const connectors = {
     logo: <Image src={MetaMaskLogo} alt="Metamask logo" />,
     method: injected,
   },
-  Fortmatic: {
-    name: "Fortmatic",
-    logo: <Image src={FortmaticLogo} alt="FortmaticLogo logo" />,
-    method: fortmatic,
-  },
+  // Fortmatic: {
+  //   name: "Fortmatic",
+  //   logo: <Image src={FortmaticLogo} alt="FortmaticLogo logo" />,
+  //   method: fortmatic,
+  // },
 };
 
 const isMobileDevice = () =>

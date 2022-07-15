@@ -202,7 +202,7 @@ const NftItem = ({ nftId }) => {
                     {canListItem && (
                       <Input
                         name="price"
-                        label="Asset price in ETH"
+                        label="Asset price in MATIC"
                         placeholder="Example: 0.75"
                         errorMessage="Asset price is a required field"
                         type="number"

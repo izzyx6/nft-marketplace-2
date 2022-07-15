@@ -1,2 +1,4 @@
-export const nftmarketaddress = "0xe78B6FF1760A8ADddc1915075E7a55CBfCee392D";
-export const nftaddress = "0x0af3A093b1C75bD025FD1C293bDC7B967a9f67b0";
+
+  export const nftmarketaddress = "0x8A5FB7f2c70a8d7e7E87CC6E704A53F38a3F185e"
+  export const nftaddress = "0x7b1ba44F2dC4379d0B59F2F6F87322fD97ad5b4C"
+//SMART CONTRACTS CURRENTLY DEPLOYED ON MAINNET  

@@ -77,7 +77,7 @@ const WalletInfo = ({ walletAddress }) => {
       <div className="border-2 m-6 mb-0 flex flex-col items-center rounded-b-none">
         <h1 className="font-bold text-gray-400 p-2">Total balance</h1>
         <div className="flex font-bold p-4">
-          <span className="text-pink-400 mr-2">ETH</span>
+          <span className="text-pink-400 mr-2">MATIC</span>
           <span>{balance}</span>
         </div>
       </div>
