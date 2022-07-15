@@ -78,8 +78,8 @@ export default function CreateItem() {
 
   return (
     <>
-    <h5 classNameName="py-2 text-2xl font-bold">Listing fee - 0.1 Matic</h5>
-    <div classNameName="flex justify-center md:pt-10">
+    {/* <h5 className="py-2 text-2xl font-bold">Listing fee - 0.1 Matic</h5> */}
+    <div className="flex justify-center md:pt-10">
       <Formik
         initialValues={initialValues}
         onSubmit={handleSubmit}
@@ -87,18 +87,18 @@ export default function CreateItem() {
         validationSchema={validationSchema}
       >
         {({ isValid }) => (
-          <Form classNameName="w-full p-2 md:w-5/6 md:p-10 xl:w-2/3 2xl:w-3/5 border-2 rounded-lg bg-white">
-            <h1 classNameName="py-5 text-2xl font-bold">Create new item</h1>
-            <div classNameName="flex flex-col lg:flex-row pt-5">
+          <Form className="w-full p-2 md:w-5/6 md:p-10 xl:w-2/3 2xl:w-3/5 border-2 rounded-lg bg-white">
+            <h1 className="py-5 text-2xl font-bold">Create new item</h1>
+            <div className="flex flex-col lg:flex-row pt-5">
               <ImageUpload
                 onSetUploadedImages={setUploadedImages}
                 imgPreviewUrl={uploadedImages[0]?.preview || ""}
                 handleRemoveImage={handleRemoveAllImages}
                 isDisabled={!!uploadedImages[0]?.preview}
                 isLoading={isIpfsLoading}
-                classNameName="lg:mr-4"
+                className="lg:mr-4"
               />
-              <div classNameName="flex-1 flex flex-col justify-between pt-2 lg:pt-0">
+              <div className="flex-1 flex flex-col justify-between pt-2 lg:pt-0">
                 <Input
                   name="name"
                   label="Asset name"
@@ -115,7 +115,7 @@ export default function CreateItem() {
                   label="Create Digital Asset"
                   isDisabled={!isValid || !ipfsUrl || isLoading}
                   isLoading={isIpfsLoading || isLoading}
-                  classNameName="mt-4 w-full"
+                  className="mt-4 w-full"
                   isTypeSubmit
                   size="lg"
                 />

@@ -7,8 +7,8 @@ import useGetCreatedNfts from "../hooks/queries/useGetCreatedNfts";
 import useRemoveListedNft from "../hooks/mutations/useRemoveListedNft";
 
 const getConnectMessage = (message) => (
-  <div classNameName="flex flex-col justify-center items-center flex-1">
-    <h1 classNameName="py-10 text-2xl">{message}</h1>
+  <div className="flex flex-col justify-center items-center flex-1">
+    <h1 className="py-10 text-2xl">{message}</h1>
   </div>
 );
 
@@ -64,7 +64,7 @@ export default function CreatorDashboard() {
 
   return (
     <>
-      <h1 classNameName="py-5 text-2xl font-bold">My listed items</h1>
+      <h1 className="py-5 text-2xl font-bold">My listed items</h1>
       {!active ? (
         getConnectMessage("Connect wallet to view your listed assets")
       ) : (
@@ -78,7 +78,7 @@ export default function CreatorDashboard() {
         />
       )}
 
-      <h1 classNameName="py-5 text-2xl font-bold">Items sold</h1>
+      <h1 className="py-5 text-2xl font-bold">Items sold</h1>
       {!active ? (
         getConnectMessage("Connect wallet to view your sold assets")
       ) : (

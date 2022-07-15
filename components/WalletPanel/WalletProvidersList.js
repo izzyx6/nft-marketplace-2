@@ -43,7 +43,7 @@ const WalletProvidersList = () => {
           console.log("Connected wallet successfully");
         })
         .catch((err) => {
-          console.log(err);
+          console.log("Throwing erro: ",err);
         });
     }
   };

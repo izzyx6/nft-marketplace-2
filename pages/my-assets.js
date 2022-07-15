@@ -9,8 +9,8 @@ export default function MyAssets() {
 
   if (!active) {
     return (
-      <div classNameName="flex flex-col justify-center items-center flex-1">
-        <h1 classNameName="py-10 text-2xl">
+      <div className="flex flex-col justify-center items-center flex-1">
+        <h1 className="py-10 text-2xl">
           Connect wallet to view your assets
         </h1>
       </div>
@@ -19,8 +19,8 @@ export default function MyAssets() {
 
   return (
     <>
-      <h1 classNameNameName="py-5 text-2xl font-bold">My assets</h1>
-      <h5 classNameName="py-2 text-grey">Listing fee - 0.1 Matic</h5>
+      <h1 className="py-5 text-2xl font-bold">My assets</h1>
+      {/* <h5 className="py-2 text-grey">Listing fee - 0.1 Matic</h5> */}
       <NFTList
         nfts={data}
         isLoading={isLoading}
