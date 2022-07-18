@@ -11,7 +11,7 @@ const connectors = {
     name: "Metamask",
     logo: <Image src={MetaMaskLogo} alt="Metamask logo" />,
     method: injected,
-  },
+  }
   // Fortmatic: {
   //   name: "Fortmatic",
   //   logo: <Image src={FortmaticLogo} alt="FortmaticLogo logo" />,
@@ -36,6 +36,7 @@ const WalletProvidersList = () => {
       return;
     }
     if (active) {
+      console.log("Activated: .....");
       deactivate();
     } else {
       await activate(connector)
@@ -43,7 +44,7 @@ const WalletProvidersList = () => {
           console.log("Connected wallet successfully");
         })
         .catch((err) => {
-          console.log("Throwing erro: ",err);
+          console.log("Throwing error: ",err);
         });
     }
   };

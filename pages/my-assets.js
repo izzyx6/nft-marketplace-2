@@ -8,6 +8,7 @@ export default function MyAssets() {
   const { data, isLoading } = useGetOwnedNfts();
 
   if (!active) {
+
     return (
       <div className="flex flex-col justify-center items-center flex-1">
         <h1 className="py-10 text-2xl">

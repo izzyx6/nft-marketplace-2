@@ -69,18 +69,18 @@ const Layout = ({ children }) => {
         isNavOpen={isNavOpen}
         onSetIsNavOpen={setIsNavOpen}
       />
-      {chainId !== 80001 && active && (
+      {chainId !==137  && !active && (
         <div className="bg-yellow-200 text-yellow-600 h-12 flex items-center justify-center">
           <ExclamationIcon className="h-6 w-6 mr-2" />
-          <p>Please switch to</p>
-          <a
+          <p>Please Connect MetaMask Wallet to Polygon Mainnet</p>
+          {/* <a
             href="https://github.com/UrbanWill/nft-marketplace#setup"
             target="_blank"
             rel="noopener noreferrer"
             className="underline ml-1"
           >
-            Polygon test net
-          </a>
+            Polygon Mainnet
+          </a> */}
         </div>
       )}
       {/* div with relative class needed to render slideover panel */}

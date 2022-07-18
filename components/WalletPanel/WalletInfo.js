@@ -16,6 +16,7 @@ const WalletInfo = ({ walletAddress }) => {
   const [balance, setBalance] = useState(0);
   const [isModalOpen, setIsModalOpen] = useState(false);
   const { account, library, chainId } = useWeb3React();
+  console.log("Connected Chain Id: .",chainId)
 
   useEffect(() => {
     if (!!account && !!library) {
