@@ -21,7 +21,7 @@ const navOptions = [
   { route: CREATOR_DASHBOARD, label: "Creator dashboard" },
 ];
 
-const defaultMetaTitle = "Chaintusker NFTMarketplace";
+const defaultMetaTitle = "NFTMarketplace";
 
 const contextClass = {
   success: "bg-green-200 text-green-600",
