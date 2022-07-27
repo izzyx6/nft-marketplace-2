@@ -78,8 +78,7 @@ const Layout = ({ children }) => {
             target="_blank"
             rel="noopener noreferrer"
             className="underline ml-1"
-          >
-            Polygon Mainnet
+          >Polygon Mainnet
           </a>
         </div>
       )}
