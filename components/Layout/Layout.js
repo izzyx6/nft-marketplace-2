@@ -72,15 +72,15 @@ const Layout = ({ children }) => {
       {chainId !==137  && !active && (
         <div className="bg-yellow-200 text-yellow-600 h-12 flex items-center justify-center">
           <ExclamationIcon className="h-6 w-6 mr-2" />
-          <p>Please Connect MetaMask Wallet to Polygon Mainnet</p>
-          {/* <a
-            href="https://github.com/UrbanWill/nft-marketplace#setup"
+          <p>Please Connect MetaMask to </p>
+       <a
+            href="https://coinmarketcap.com/alexandria/article/connect-metamask-to-polygon-network"
             target="_blank"
             rel="noopener noreferrer"
             className="underline ml-1"
           >
             Polygon Mainnet
-          </a> */}
+          </a>
         </div>
       )}
       {/* div with relative class needed to render slideover panel */}
