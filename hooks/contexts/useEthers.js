@@ -52,7 +52,8 @@ const useEthers = () => {
 };
 
 /** Static contract values */
-const provider = new ethers.providers.JsonRpcProvider("https://rpc-mainnet.maticvigil.com");
+const provider = new ethers.providers.JsonRpcProvider("https://withered-green-violet.matic.discover.quiknode.pro/f0cfae86efa30d7155ede7409b9727679b8c35ed/");
+
 // const provider = new ethers.providers.JsonRpcProvider();
 const tokenContract = new ethers.Contract(nftaddress, NFT.abi, provider);
 const marketContract = new ethers.Contract(
