@@ -5,14 +5,7 @@ module.exports = {
             "assets.vercel.com", "ipfs.infura.io", "chaintusker.infura-ipfs.io", ""
         ],
 
-formats : [
-    "image/avif",
-    "image/webp",
-    "image/png",
-    "image/jpg",
-    "image/jpeg"
-]
-
+        formats: ["image/avif", "image/webp"]
 
 
     }
