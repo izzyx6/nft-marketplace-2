@@ -14,7 +14,9 @@ import ImageUpload from "../components/shared/ImageUpload/ImageUpload";
 
 import Button from "../components/shared/Button/Button";
 
-const ipfsInfuraUrl = "https://ipfs.infura.io/ipfs";
+const ipfsInfuraUrl = "https://chaintusker.infura-ipfs.io/ipfs";
+// https : // chaintusker.infura-ipfs.io/ipfs/
+
 
 export default function CreateItem() {
   const [uploadedImages, setUploadedImages] = useState([]);

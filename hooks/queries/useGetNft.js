@@ -1,4 +1,4 @@
-import { useState, useEffect, useCallback } from "react";
+import {useState, useEffect, useCallback} from "react";
 import axios from "axios";
 import formatItem from "../../utils/formatItem";
 
@@ -10,45 +10,45 @@ import useEthers from "../contexts/useEthers";
  */
 
 const useGetNft = (tokenId) => {
-  const [nft, setNft] = useState({});
-  const [isLoading, setIsLoading] = useState(true);
-  const [error, setError] = useState(false);
+    const [nft, setNft] = useState({});
+    const [isLoading, setIsLoading] = useState(true);
+    const [error, setError] = useState(false);
 
-  const { tokenContract } = useEthers();
+    const {tokenContract} = useEthers();
 
-  const getNft = useCallback(async () => {
-    if (!tokenContract || !tokenId) {
-      return;
-    }
+    const getNft = useCallback(async () => {
+        if (!tokenContract || !tokenId) {
+            return;
+        }
 
-    const totalSupply = await tokenContract.totalSupply();
+        const totalSupply = await tokenContract.totalSupply();
 
-    if (tokenId > totalSupply) {
-      setError(true);
-      setIsLoading(false);
-      return;
-    }
+        if (tokenId > totalSupply) {
+            setError(true);
+            setIsLoading(false);
+            return;
+        }
 
-    const owner = await tokenContract.ownerOf(tokenId);
+        const owner = await tokenContract.ownerOf(tokenId);
 
-    const tokenUri = await tokenContract.tokenURI(tokenId);
-    const meta = await axios.get(tokenUri);
+        let tokenUri = await tokenContract.tokenURI(tokenId);
+        tokenUri = tokenUri.replace("https://ipfs.infura.io/ipfs/", "https://chaintusker.infura-ipfs.io/ipfs/");
 
-    setNft(formatItem({ tokenId, owner }, meta));
+        const meta = await axios.get(tokenUri);
 
-    setIsLoading(false);
-  }, [tokenContract, tokenId]);
+        setNft(formatItem({
+            tokenId,
+            owner
+        }, meta));
 
-  useEffect(() => {
-    getNft();
-  }, [getNft]);
+        setIsLoading(false);
+    }, [tokenContract, tokenId]);
 
-  return {
-    data: nft,
-    isLoading,
-    refetch: getNft,
-    error,
-  };
+    useEffect(() => {
+        getNft();
+    }, [getNft]);
+
+    return {data: nft, isLoading, refetch: getNft, error};
 };
 
 export default useGetNft;

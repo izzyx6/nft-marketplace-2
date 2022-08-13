@@ -34,7 +34,9 @@ const useGetCreatedNfts = () => {
         if (data) {
             
             const formattedItems = await Promise.all(data.map(async (item) => {
-                const tokenUri = await tokenContract.tokenURI(item.tokenId);
+                let tokenUri = await tokenContract.tokenURI(item.tokenId);
+                tokenUri = tokenUri.replace("https://ipfs.infura.io/ipfs/", "https://chaintusker.infura-ipfs.io/ipfs/");
+
                 const meta = await axios.get(tokenUri);
                 return formatItem(item, meta);
             }));
